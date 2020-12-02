@@ -6,8 +6,8 @@ public class ReportRepair {
     Scanner in = new Scanner(System.in);
     List<Integer> arr = new ArrayList<Integer>();     // creates array for the list of entries
     
-    while (in.hasNextLine()) {     // here I cheated a bit; I checked the list to see that the last entry was 1779, and it was the only time 1779 occurred
-      x = in.nextInt();     // this loop adds entries to the arraylist
+    while (in.hasNextLine()) {     
+      x = in.nextInt();    
       arr.add(x);
     }
 

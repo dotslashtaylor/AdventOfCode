@@ -5,13 +5,11 @@ public class ReportRepair {
   public static void main(String[] args) throws IOException {
     Scanner in = new Scanner(System.in);
     List<Integer> arr = new ArrayList<Integer>();     // creates array for the list of entries
-    int x = in.nextInt();
     
-    while (x != 1779) {     // here I cheated a bit; I checked the list to see that the last entry was 1779, and it was the only time 1779 occurred
+    while (in.hasNextLine()) {     // here I cheated a bit; I checked the list to see that the last entry was 1779, and it was the only time 1779 occurred
       x = in.nextInt();     // this loop adds entries to the arraylist
       arr.add(x);
     }
-    arr.add(1779);
 
     System.out.println("Number of entries: " + arr.size());
 

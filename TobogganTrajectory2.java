@@ -10,6 +10,7 @@ public class TobogganTrajectory2 {
 
 		while (in.hasNextLine()) {
 			k = in.nextLine();
+			in.nextLine();
 			if (x > k.length()) {
 				x = x - k.length();
 			}
@@ -17,7 +18,7 @@ public class TobogganTrajectory2 {
 			if (k.charAt(x - 1) == '#') {
 				counter++;
 			}
-			x += 3;
+			x++;
 		}
 		System.out.println(k.length());
 		System.out.println(counter);

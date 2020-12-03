@@ -1,7 +1,7 @@
 import java.util.*;
 import java.io.*;
 
-public class solution {
+public class Day2-PasswordPhilosophy-1 {
 	public static void main(String[] args) throws IOException {
 		Scanner in = new Scanner(new File("input"));
 		String l;

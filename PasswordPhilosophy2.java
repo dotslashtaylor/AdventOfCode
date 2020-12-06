@@ -1,7 +1,7 @@
 import java.util.*;
 import java.io.*;
 
-public class solutions {
+public class Day2-PasswordPhilosophy-1 {
 	public static void main(String[] args) throws IOException {
 		Scanner in = new Scanner(new File("input"));
 		String l;
@@ -21,12 +21,19 @@ public class solutions {
 			max = Integer.parseInt(str[1]);
 			letter = str[2];
 			passwd = str[3];
-			
-			if ((letter.charAt(0) == passwd.charAt(min - 1)) ^ (letter.charAt(0) == passwd.charAt(max - 1))) {
+			while (i < passwd.length()) {
+				if (letter.charAt(0) == passwd.charAt(i)) {
+					check++;
+				}
+				i++;
+			}
+
+			if (check <= max && check >= min) {
 				counter++;
 			}
-			
 			System.out.println(min + " " + max + " " + letter + " " + passwd + " " + check + " " + counter);
+			i = 0;
+			check = 0;
 		}
 		
 		System.out.println(counter);

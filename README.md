@@ -39,3 +39,9 @@ EXPERIENCE: BEGINNER
 	- part 2 (CustomCustoms2.java)
 	- input (input6)
 	- Reflection:
+
+- Day Seven: Handy Haversacks *
+	- part 1 (HandyHaversacks1.java)
+	- part 2 (HandyHaversacks2.java)
+	- input (input7)
+	- Reflection:

@@ -51,3 +51,9 @@ EXPERIENCE: BEGINNER
 	- part 2 (HandheldHalting2.java)
 	- input (inputs/input8)
 	- Reflection:
+
+- Day Nine: Encoding Error * (solved first part, partially correct)
+	- part 1 (EncodingError1.java)
+	- part 2 (EncodingError2.java)
+	- input (inputs/input9)
+	- Reflection:

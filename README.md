@@ -3,12 +3,10 @@
 LANGUAGE: JAVA
 EXPERIENCE: BEGINNER
 
-- Day One: Report Repair
-	- part 1 (ReportRepair1.java)
-	- part 2 (ReportRepair2.java)
+- Day One: Report Repair (ReportRepairDay1.java)
 	- input (inputs/input1)
 	- Reflection:
-		I got 776064 for the first solution and 6964490 for the second. This was a bit easier than I expected, but I'm not complaining.
+		This was a bit easier than I expected, but I'm not complaining.
 
 - Day Two: Password Philosophy
 	- part 1 (PasswordPhilosophy1.java)

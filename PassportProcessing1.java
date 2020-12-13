@@ -3,7 +3,7 @@ import java.io.*;
 
 public class PassportProcessing1 {
 	public static void main(String[] args) throws IOException {
-		Scanner in = new Scanner(new File("input"));
+		Scanner in = new Scanner(new File("input2"));
 		PrintWriter out = new PrintWriter(new FileWriter("output"));
 		List<String> lines = new ArrayList<String>();
 		List<Integer> missing = new ArrayList<Integer>();
@@ -25,7 +25,7 @@ public class PassportProcessing1 {
 				}
 			}
 			counter = counter + other;	
-			System.out.println(other + ", " + counter);
+			System.out.println(other + ", " + counter + " " + l);
 			if (other == 0) {
 				if (counter < 8) {
 					missing.add(i);

@@ -3,7 +3,7 @@ import java.util.*;
 
 public class TobogganTrajectory1 {
 	public static void main(String[] args) throws IOException {
-		Scanner in = new Scanner(new File("input3"));
+		Scanner in = new Scanner(new File("./inputs/input3"));
 		int counter = 0;
 		int x = 1;
 		String k = "";	

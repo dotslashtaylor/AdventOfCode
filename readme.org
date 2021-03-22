@@ -1,0 +1,12 @@
+#+title: read me
+
+* in progress
+- 2020 - java
+
+
+* completed
+
+* planned
+- 2021 - python
+- 2019 - scheme
+- 2018 - bash

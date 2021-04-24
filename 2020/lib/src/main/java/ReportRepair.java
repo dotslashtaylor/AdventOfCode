@@ -1,3 +1,5 @@
+package adventofcode2020;
+
 public class ReportRepair {
 
 	public static int partOne(int[] expenseReport) {

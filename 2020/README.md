@@ -1,57 +1,12 @@
 # [Advent Of Code](https://adventofcode.com/)
 
-LANGUAGE: JAVA
-EXPERIENCE: BEGINNER
+## How this is organized
+This directory is set up as a gradle library.
+In the `lib/src/main/java` folder, I write my code and logic for the actual challenge.
+In the `lib/src/test/java` folder, I write the tests provided by the challenge as examples.
+In the `lib/src/main/java/ui` folder, I write helper functions that allow me to get the actual output, depending on my personal input files.
+I store my input files in the `lib/src/test/resources` folder.
 
-- Day One: Report Repair (ReportRepairDay1.java)
-	- input (inputs/input1)
-	- Reflection:
-		This was a bit easier than I expected, but I'm not complaining.
-
-- Day Two: Password Philosophy
-	- part 1 (PasswordPhilosophy1.java)
-	- part 2 (PasswordPhilosophy2.java)
-	- input (inputs/input2)
-	- Reflection:
-
-- Day Three: Toboggan Trajectory
-	- part 1 (TobogganTrajectory1.java)
-	- part 2 (TobogganTrajectory2.java)
-	- input (inputs/input3)
-	- Reflection:
-
-- Day Four: Passport Processing *
-	- part 1 (PassportProcessing1.java)
-	- part 2 (PassportProcessing2.java)
-	- input (inputs/input4)
-	- Reflection:
-
-- Day Five: Binary Boarding
-	- part 1 (BinaryBoarding1.java)
-	- part 2 (BinaryBoarding2.java)
-	- input (inputs/input5)
-	- Reflection:
-
-- Day Six: Custom Customs
-	- part 1 (CustomCustoms1.java)
-	- part 2 (CustomCustoms2.java)
-	- input (inputs/input6)
-	- Reflection:
-
-- Day Seven: Handy Haversacks *
-	- part 1 (HandyHaversacks1.java)
-	- part 2 (HandyHaversacks2.java)
-	- input (inputs/input7)
-	- Reflection:
-
-- Day Eight: Handheld Halting
-	- part 1 (HandheldHalting1.java)
-	- part 2 (HandheldHalting2.java)
-	- input (inputs/input8)
-	- Reflection:
-
-- Day Nine: Encoding Error * (solved first part, partially correct)
-	- part 1 (EncodingError1.java)
-	- part 2 (EncodingError2.java)
-	- input (inputs/input9)
-	- Reflection:
+When I need to test and compile the code, I run `gradle build`.
+I have also provided myself with a bash script, `getresult.sh`, 
+that allows me to more easily run and check the results of the code.

@@ -1,3 +1,7 @@
+package adventofcode2020.ui;
+
+import adventofcode2020.ReportRepair;
+
 public class GetResult {
 
 	public static void main(String[] args) {

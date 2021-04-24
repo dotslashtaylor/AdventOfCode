@@ -1,4 +1,4 @@
-package adventofcode2020;
+package adventofcode2020.two;
 
 import java.io.File;
 import java.util.Scanner;
@@ -12,17 +12,16 @@ public class PasswordPhilosophy {
 			File dataFile = new File(relativePath);
 			Scanner scan = new Scanner(dataFile);
 
-			int[] rowRange = new int[2];
-			char rowLetter;
-			String newPassword;	
-
 			while (scan.hasNextLine()) {
+				int[] rowRange = new int[2];
+				char rowLetter;
+				String newPassword;	
 				String newRow = scan.nextLine();
-				rowRange[0] = Integer.parseInt(newRow.substring(0, newRow.indexOf("-")));
-				rowRange[1] = Integer.parseInt(newRow.substring(newRow.indexOf("-") + 1, newRow.indexOf(" ")));
-				newRow = newRow.substring(4, newRow.length());
-				rowLetter = newRow.charAt(0);
-				newPassword = newRow.substring(4, newRow.length());
+				String[] parts = newRow.split("-|\\s|\\: ");
+				rowRange[0] = Integer.parseInt(parts[0]);
+				rowRange[1] = Integer.parseInt(parts[1]);
+				rowLetter = parts[2].charAt(0);
+				newPassword = parts[3];
 				allPasswords.add(new Row(rowRange, rowLetter, newPassword));
 			}		
 		}
@@ -82,21 +81,17 @@ public class PasswordPhilosophy {
 	}
 
 
-	public static int partTwo() {
-		return 0;	
-
+	public static int partTwo(int[][] range, char[] letter, String[] passwordsList) {
+		int validPasswords = 0;
+		for (int i = 0; i < range.length; i++) {
+			int[] passwordrange = range[i];
+			char pLetter = letter[i];
+			String thePassword = passwordsList[i];
+			if (thePassword.charAt(passwordrange[0] - 1) == pLetter ^ thePassword.charAt(passwordrange[1] - 1) == pLetter) {
+				validPasswords += 1;
+			}
+		}	
+		return validPasswords;
 	}
 
-}
-
-class Row {
-	int[] passwordRange;
-	char letter;
-	String password;
-
-	Row(int[] passwordRange, char letter, String password) {
-		this.passwordRange = passwordRange;
-		this.letter = letter;
-		this.password = password;	
-	}
 }

@@ -1,4 +1,4 @@
-package adventofcode2020;
+package adventofcode2020.one;
 
 import java.io.File;
 import java.util.Scanner;

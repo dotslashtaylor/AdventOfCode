@@ -1,7 +1,7 @@
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
-import adventofcode2020.ReportRepair;
+import adventofcode2020.one.ReportRepair;
 
 class ReportRepairTest {
 	@Test void testMainMethods() {

@@ -1,5 +1,7 @@
 #+title: read me
 
+- [[https://adventofcode.com/][advent of code]]
+
 * in progress
 - 2020 - java
 

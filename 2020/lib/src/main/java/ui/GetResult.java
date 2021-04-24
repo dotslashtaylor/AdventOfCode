@@ -1,15 +1,19 @@
 package adventofcode2020.ui;
 
-import adventofcode2020.ReportRepair;
+import java.util.ArrayList;
+import java.util.Arrays;
+
+import adventofcode2020.PasswordPhilosophy;
 
 public class GetResult {
 
 	public static void main(String[] args) {
-		int[] dataSet = ReportRepair.getData("../../../resources/test/day1.txt");
-			int result1 = ReportRepair.partOne(dataSet);
-			System.out.println(result1);
-			int result2 = ReportRepair.partTwo(dataSet);
-			System.out.println(result2);
+		String relLocation = "../../../resources/test/daytest2.txt";
+		int[][] ranges = PasswordPhilosophy.getRanges(PasswordPhilosophy.getData(relLocation));
+		char[] letters = PasswordPhilosophy.getLetters(PasswordPhilosophy.getData(relLocation));
+		String[] passwords = PasswordPhilosophy.getPasswords(PasswordPhilosophy.getData(relLocation));
+		int result1 = PasswordPhilosophy.partOne(ranges, letters, passwords);
+		System.out.println(result1);
 	}
 
 }

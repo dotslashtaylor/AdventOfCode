@@ -10,3 +10,6 @@ This directory is set up as a gradle library:
 When I need to test and compile the code, I run `gradle build`.
 I have also provided myself with a bash script, `getresult.sh`, 
 that allows me to more easily run and check the results of the code.
+
+## Notes:
+- Try Day 4 again, using classes

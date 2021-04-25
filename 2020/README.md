@@ -11,5 +11,8 @@ When I need to test and compile the code, I run `gradle build`.
 I have also provided myself with a bash script, `getresult.sh`, 
 that allows me to more easily run and check the results of the code.
 
-## Notes:
+## TODO:
 - Try Day 4 again, using classes
+- Add Benchmarking
+- Research types
+- Refactor directory structure

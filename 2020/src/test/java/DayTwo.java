@@ -1,31 +1,39 @@
-/*package adventofcode2020.one;
+package adventofcode2020.two;
+
 import java.util.ArrayList;
 
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
-class DayOne {
+class PasswordPhilosophyTest {
 
-	ReportRepair reportRepair = new ReportRepair();
+	PasswordPhilosophy passwordPhilosophy = new PasswordPhilosophy();
 
 	@Test 
 	void testPartOne() {
-		ArrayList<Integer> testValues = new ArrayList<>();
-		for (int i : new int[]{1721, 979, 366, 299, 675, 1456}) {
-			testValues.add(i);
+		ArrayList testValues = new ArrayList();
+		int[][] ranges = new int[][]{{1, 2}, {1, 3}, {2, 9}};
+		char[] chars = new char[]{'a', 'b', 'c'};
+		String[] strings = new String[]{"abcde", "cdefg", "ccccccccc"};
+		for (int i = 0; i < 3; i++) {
+			testValues.add(new Row(ranges[i], chars[i], strings[i]));
 		}
-		assertEquals(514579, reportRepair.partOne(testValues));
+
+		assertEquals(2, passwordPhilosophy.partOne(testValues));
 	}
 
-
-	@Test
+	@Test 
 	void testPartTwo() {
-		ArrayList<Integer> testValues = new ArrayList<>();
-		for (int i : new int[]{1721, 979, 366, 299, 675, 1456}) {
-			testValues.add(i);
+		ArrayList testValues = new ArrayList();
+		int[][] ranges = new int[][]{{1, 2}, {1, 3}, {2, 9}};
+		char[] chars = new char[]{'a', 'b', 'c'};
+		String[] strings = new String[]{"abcde", "cdefg", "ccccccccc"};
+		for (int i = 0; i < 3; i++) {
+			testValues.add(new Row(ranges[i], chars[i], strings[i]));
 		}
-		assertEquals(241861950, reportRepair.partTwo(testValues));
+
+		assertEquals(1, passwordPhilosophy.partTwo(testValues));
+
 	}
 
 }
-*/

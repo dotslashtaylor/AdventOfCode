@@ -4,8 +4,8 @@ import java.util.ArrayList;
 
 public abstract class Solution {
 
-	private String inputRelPath;
-	private String identifier;
+	String inputRelPath;
+	String identifier;
 
 
 

@@ -1,0 +1,33 @@
+plugins {
+	id 'application'
+}
+
+repositories {
+	mavenCentral()
+}
+
+dependencies {
+	testImplementation 'org.junit.jupiter:junit-jupiter-api:5.6.2'
+	testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine'
+	implementation 'com.google.guava:guava:29.0-jre'
+	compile 'com.github.spullara.mustache.java:compiler:0.9.7'
+}
+
+sourceSets {
+	main {
+		java {
+			srcDirs = ["src/main"];
+		}
+		resources {
+			srcDirs = ["resources"];
+		}
+	}
+}
+
+application {
+	mainClass = 'adventofcode2020.Main'
+}
+
+tasks.named('test') {
+    useJUnitPlatform()
+}

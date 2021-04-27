@@ -5,9 +5,9 @@ import java.util.ArrayList;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
-class PasswordPhilosophyTest {
+class DayTwoTest {
 
-	PasswordPhilosophy passwordPhilosophy = new PasswordPhilosophy();
+	PasswordPhilosophy testClass = new PasswordPhilosophy();
 
 	@Test 
 	void testPartOne() {
@@ -19,7 +19,7 @@ class PasswordPhilosophyTest {
 			testValues.add(new Row(ranges[i], chars[i], strings[i]));
 		}
 
-		assertEquals(2, passwordPhilosophy.partOne(testValues));
+		assertEquals(2, testClass.partOne(testValues));
 	}
 
 	@Test 
@@ -32,7 +32,7 @@ class PasswordPhilosophyTest {
 			testValues.add(new Row(ranges[i], chars[i], strings[i]));
 		}
 
-		assertEquals(1, passwordPhilosophy.partTwo(testValues));
+		assertEquals(1, testClass.partTwo(testValues));
 
 	}
 

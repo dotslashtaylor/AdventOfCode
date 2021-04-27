@@ -1,0 +1,44 @@
+package adventofcode2020.{{ day }};
+
+import adventofcode2020.Solution;
+
+import java.util.ArrayList;
+import java.util.Scanner;
+import java.io.File;
+
+public class {{ ClassName }} extends Solution {
+
+	public {{ ClassName }}() {
+		inputRelPath = "./resources/inputs/day{{ number }}.txt";
+		identifier = "Day {{ day }}: {{ ClassName }}";
+	}
+
+	public ArrayList getData() {
+		ArrayList dataList = new ArrayList();
+		try {
+			File dataFile = new File(inputRelPath);
+			Scanner scan = new Scanner(dataFile);
+			while (scan.hasNextLine()) {
+				dataList.add(scan.nextLine());
+			}
+		}
+		catch(Exception exception) {
+			System.err.println(exception);
+			System.exit(1);
+		}
+		return dataList;
+	}
+
+	public int partOne(ArrayList dataList) {
+		int solution = 0;
+
+		return solution;
+	}
+
+	public int partTwo(ArrayList dataList) {
+		int solution = 0;
+
+		return solution;
+	}
+
+}

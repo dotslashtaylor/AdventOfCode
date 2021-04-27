@@ -5,20 +5,20 @@ import java.util.ArrayList;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
-class {{ Day }} {
+class {{ Day }}Test {
 
-	{{ ClassName }} {{ ClassName }} = new {{ ClassName }}();
+	{{ ClassName }} testClass = new {{ ClassName }}();
 
 	@Test 
 	void testPartOne() {
 		ArrayList testValues = new ArrayList();
-		assertEquals(0, {{ ClassName }}.partOne(testValues));
+		assertEquals(0, testClass.partOne(testValues));
 	}
 
 	@Test 
 	void testPartTwo() {
-
-
+		ArrayList testValues = new ArrayList();
+		assertEquals(0, testClass.partTwo(testValues));
 	}
 
 }

@@ -8,8 +8,10 @@ import java.io.File;
 
 public class ReportRepair extends Solution {
 
-	private final String inputRelPath = "./resources/day1.txt";
-	private final String identifier = "Day One: ReportRepair";
+	public ReportRepair() {
+		inputRelPath = "./resources/inputs/day1.txt";
+		identifier = "Day One: ReportRepair";
+	}
 
 	public ArrayList getData() {
 		ArrayList<Integer> dataList = new ArrayList<>();

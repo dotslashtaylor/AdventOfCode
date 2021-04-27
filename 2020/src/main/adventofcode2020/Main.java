@@ -7,6 +7,7 @@ import java.io.File;
 
 import adventofcode2020.one.ReportRepair;
 import adventofcode2020.two.PasswordPhilosophy;
+import adventofcode2020.three.TobogganTrajectory;
 
 public class Main {
 
@@ -14,10 +15,14 @@ public class Main {
 		ArrayList<Solution> solutionsList = new ArrayList<>();
 		solutionsList.add(new ReportRepair());
 		solutionsList.add(new PasswordPhilosophy());
+		solutionsList.add(new TobogganTrajectory());
 
 		if (args.length > 0) {
-			int index = Integer.parseInt(args[0]) - 1;
-			solutionsList.get(index).getResult();
+			for(String argument : args) {
+
+				int index = Integer.parseInt(argument) - 1;
+				solutionsList.get(index).getResult();
+			}
 		}
 		else {
 			solutionsList.stream().forEach(Solution::getResult);

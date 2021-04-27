@@ -1,4 +1,4 @@
-package adventofcode2020.{{ day }};
+package adventofcode2020.four;
 
 import adventofcode2020.Solution;
 
@@ -6,10 +6,12 @@ import java.util.ArrayList;
 import java.util.Scanner;
 import java.io.File;
 
-public class {{ ClassName }} extends Solution {
+public class PassportProcessing extends Solution {
 
-	private final String inputRelPath = "./resources/day{{ number }}.txt";
-	private final String identifier = "Day {{ day }}: {{ ClassName }}";
+	public PassportProcessing() {
+		inputRelPath = "./resources/inputs/day4.txt";
+		identifier = "Day four: PassportProcessing";
+	}
 
 	public ArrayList getData() {
 		ArrayList dataList = new ArrayList();
@@ -24,6 +26,7 @@ public class {{ ClassName }} extends Solution {
 			System.err.println(exception);
 			System.exit(1);
 		}
+		return dataList;
 	}
 
 	public int partOne(ArrayList dataList) {

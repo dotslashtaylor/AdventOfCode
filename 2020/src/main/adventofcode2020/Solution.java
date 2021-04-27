@@ -4,21 +4,16 @@ import java.util.ArrayList;
 
 public abstract class Solution {
 
-	String inputRelPath;
-	String identifier;
-
-
+	public String inputRelPath;
+	public String identifier;
 
 	public long getTime() {
 		return System.currentTimeMillis();
 	}
 
 	public String timeExecution(long start, long finish) {
-		return (finish - start) / 1000 + " seconds";
+		return (finish - start) + " milliseconds";
 	}
-
-
-
 
 	public void getResult() {
 		System.out.println(identifier);
@@ -30,6 +25,7 @@ public abstract class Solution {
 		System.out.println("Part One: " + solutionOne + "\n"
 							+ "Part Two: " + solutionTwo + "\n"
 							+ "Time: " + timeExecution(start, end));
+		System.out.println();
 	}
 
 	public abstract ArrayList getData();

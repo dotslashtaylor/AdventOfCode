@@ -7,12 +7,10 @@ import java.util.Scanner;
 import java.io.File;
 
 public class PasswordPhilosophy extends Solution {
-	String inputRelPath;
-	String identifier;
 
 	public PasswordPhilosophy() {
-		this.inputRelPath = "./resources/day2.txt";
-		this.identifier = "Day Two: PasswordPhilosophy";
+		inputRelPath = "./resources/inputs/day2.txt";
+		identifier = "Day Two: PasswordPhilosophy";
 	}
 
 	public ArrayList getData() {

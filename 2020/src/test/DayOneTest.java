@@ -4,9 +4,9 @@ import java.util.ArrayList;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
-class DayOne {
+class DayOneTest {
 
-	ReportRepair reportRepair = new ReportRepair();
+	ReportRepair testClass = new ReportRepair();
 
 	@Test 
 	void testPartOne() {
@@ -14,7 +14,8 @@ class DayOne {
 		for (int i : new int[]{1721, 979, 366, 299, 675, 1456}) {
 			testValues.add(i);
 		}
-		assertEquals(514579, reportRepair.partOne(testValues));
+
+		assertEquals(514579, testClass.partOne(testValues));
 	}
 
 
@@ -24,7 +25,8 @@ class DayOne {
 		for (int i : new int[]{1721, 979, 366, 299, 675, 1456}) {
 			testValues.add(i);
 		}
-		assertEquals(241861950, reportRepair.partTwo(testValues));
+
+		assertEquals(241861950, testClass.partTwo(testValues));
 	}
 
 }

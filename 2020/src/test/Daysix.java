@@ -1,13 +1,13 @@
-package adventofcode2020.four;
+package adventofcode2020.six;
 
 import java.util.ArrayList;
 
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
-class DayfourTest {
+class DaysixTest {
 
-	PassportProcessing testClass = new PassportProcessing();
+	CustomCustoms testClass = new CustomCustoms();
 
 	@Test 
 	void testPartOne() {

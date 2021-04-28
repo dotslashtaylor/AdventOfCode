@@ -33,6 +33,7 @@ public class PassportProcessing {
 			System.err.println(exception);
 			System.exit(1);
 		}
+		System.out.println(allPassports.length);
 		return allPassports;
 	}
 

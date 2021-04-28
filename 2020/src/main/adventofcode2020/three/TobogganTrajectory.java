@@ -5,6 +5,7 @@ import adventofcode2020.Solution;
 import java.util.ArrayList;
 import java.util.Scanner;
 import java.io.File;
+import java.math.BigInteger;
 
 public class TobogganTrajectory extends Solution {
 
@@ -52,14 +53,16 @@ public class TobogganTrajectory extends Solution {
 	}
 
 	public int partTwo(ArrayList dataList) {
-		int solution = 1;
+		BigInteger treesHitProduct = new BigInteger("1");
 		int[][] paths = new int[][]{
 			{1, 1}, {3, 1}, {5, 1},
 			{7, 1}, {1, 2}
 		};
 		for (int[] path : paths) {
-			solution *= calculateTreesHit(dataList, path[0], path[1]);
+			BigInteger treesHitThisRound = new BigInteger("" + calculateTreesHit(dataList, path[0], path[1]));
+			treesHitProduct = treesHitProduct.multiply(treesHitThisRound);
 		}
+		int solution = treesHitProduct.intValue();
 		return solution;
 	}
 

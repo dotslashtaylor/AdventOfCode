@@ -10,6 +10,7 @@ import adventofcode2020.two.PasswordPhilosophy;
 import adventofcode2020.three.TobogganTrajectory;
 import adventofcode2020.four.PassportProcessing;
 import adventofcode2020.five.BinaryBoarding;
+import adventofcode2020.six.CustomCustoms;
 
 public class Main {
 
@@ -20,6 +21,7 @@ public class Main {
 		solutionsList.add(new TobogganTrajectory());
 		solutionsList.add(new PassportProcessing());
 		solutionsList.add(new BinaryBoarding());
+		solutionsList.add(new CustomCustoms());
 
 		if (args.length > 0) {
 			for(String argument : args) {

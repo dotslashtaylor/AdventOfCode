@@ -18,17 +18,17 @@ public class CustomCustoms extends Solution {
 		try {
 			File dataFile = new File(inputRelPath);
 			Scanner scan = new Scanner(dataFile);
-			String group = "";
+			String groupString = "";
 			while (scan.hasNextLine()) {
 				String currentLine = scan.nextLine();
 				if (currentLine.equals("")) {
-					dataList.add(group);
-					group = "";
+					dataList.add(new Group(groupString));
+					groupString = "";
 					continue;
 				}
-				group = group + currentLine;
+				groupString = groupString + " " + currentLine;
 			}
-			dataList.add(group);
+			dataList.add(new Group(groupString));
 		}
 		catch(Exception exception) {
 			System.err.println(exception);
@@ -39,13 +39,19 @@ public class CustomCustoms extends Solution {
 
 	public int partOne(ArrayList dataList) {
 		int solution = 0;
-
+		for (Object dataItem : dataList) {
+			Group currentGroup = (Group) dataItem;
+			solution = solution + currentGroup.getQuestionSetSize();
+		}
 		return solution;
 	}
 
 	public int partTwo(ArrayList dataList) {
 		int solution = 0;
-
+		for (Object dataItem : dataList) {
+			Group currentGroup = (Group) dataItem;
+			solution = solution + currentGroup.getUnanimousSize();
+		}
 		return solution;
 	}
 

@@ -28,9 +28,9 @@ public abstract class Solution {
 		System.out.println();
 	}
 
-	public abstract ArrayList getData();
+	public abstract ArrayList<?> getData();
 
-	public abstract int partOne(ArrayList dataList);
-	public abstract int partTwo(ArrayList dataList);
+	public abstract String partOne(ArrayList<?> dataList);
+	public abstract String partTwo(ArrayList<?> dataList);
 
 }

@@ -1,34 +1,36 @@
 package adventofcode2020.six;
 
-import java.util.HashSet;
-import java.util.ArrayList;
-import java.util.Iterator;
-
+import java.util.HashMap;
 
 public class Group {
 
 	private String rawString;
 	private int size;
-	private HashSet<Character> questionSet;
-	private ArrayList<Character> questionList;
+	private HashMap<Character, Integer> charCountMap;
 
-	public Group(String questions) {
-		rawString = questions.substring(1);
-		questionSet = new HashSet<>();
-		questionList = new ArrayList<>();
-		String[] questionArray = rawString.split(" ");
-		size = questionArray.length;
+	public Group(String questions, int groupSize) {
+		this.charCountMap = new HashMap<>();
+		this.rawString = questions;
+		this.size = groupSize;
+		String[] questionArray = rawString.split("\n");
 		for (String question : questionArray) {
 			for (int i = 0; i < question.length(); i++) {
 				char k = question.charAt(i);
-				questionSet.add(k);
-				questionList.add(k);
+				if (k != ' ') {
+					if (charCountMap.containsKey(k)) {
+						int newCount = charCountMap.get(k) + 1;
+						charCountMap.put(k, newCount);
+					}
+					else {
+						charCountMap.put(k, 0);
+					}
+				}
 			}
 		}
 	}
 
 	public int getQuestionSetSize() {
-		return questionSet.size();
+		return charCountMap.size();
 	}
 
 	public int getSize() {
@@ -37,16 +39,8 @@ public class Group {
 
 	public int getUnanimousSize() {
 		int count = 0;
-		Iterator<Character> charIterator = questionSet.iterator();
-		while (charIterator.hasNext()) {
-			int charCount = 0;
-			char now = charIterator.next();
-			for (char c : questionList) {
-				if (c == now) {
-					charCount++;
-				}
-			}
-			if (charCount == size) {
+		for (int i : charCountMap.values()) {
+			if (i >= size - 1) {
 				count++;
 			}
 		}

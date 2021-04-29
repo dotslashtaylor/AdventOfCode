@@ -2,7 +2,7 @@ package adventofcode2020;
 
 import java.util.ArrayList;
 
-public abstract class Solution {
+public abstract class Solution<SolutionObject, DataObject> {
 
 	public String inputRelPath;
 	public String identifier;
@@ -19,8 +19,8 @@ public abstract class Solution {
 		System.out.println(identifier);
 		long start = getTime();
 		ArrayList dataSet = getData();
-		int solutionOne = partOne(dataSet);
-		int solutionTwo = partTwo(dataSet);
+		String solutionOne = partOne(dataSet).toString();
+		String solutionTwo = partTwo(dataSet).toString();
 		long end = getTime();
 		System.out.println("Part One: " + solutionOne + "\n"
 							+ "Part Two: " + solutionTwo + "\n"
@@ -28,9 +28,9 @@ public abstract class Solution {
 		System.out.println();
 	}
 
-	public abstract ArrayList<?> getData();
+	public abstract ArrayList<DataObject> getData();
 
-	public abstract String partOne(ArrayList<?> dataList);
-	public abstract String partTwo(ArrayList<?> dataList);
+	public abstract SolutionObject partOne(ArrayList<DataObject> dataList);
+	public abstract SolutionObject partTwo(ArrayList<DataObject> dataList);
 
 }

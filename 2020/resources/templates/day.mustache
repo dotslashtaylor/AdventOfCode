@@ -6,14 +6,14 @@ import java.util.ArrayList;
 import java.util.Scanner;
 import java.io.File;
 
-public class {{ ClassName }} extends Solution {
+public class {{ ClassName }} extends Solution<SolutionObject, DataObject> {
 
 	public {{ ClassName }}() {
 		inputRelPath = "./resources/inputs/day{{ number }}.txt";
 		identifier = "Day {{ day }}: {{ ClassName }}";
 	}
 
-	public ArrayList getData() {
+	public ArrayList<DataObject> getData() {
 		ArrayList dataList = new ArrayList();
 		try {
 			File dataFile = new File(inputRelPath);
@@ -29,13 +29,13 @@ public class {{ ClassName }} extends Solution {
 		return dataList;
 	}
 
-	public int partOne(ArrayList dataList) {
+	public SolutionObject partOne(ArrayList<DataObject> dataList) {
 		int solution = 0;
 
 		return solution;
 	}
 
-	public int partTwo(ArrayList dataList) {
+	public SolutionObject partTwo(ArrayList<DataObject> dataList) {
 		int solution = 0;
 
 		return solution;

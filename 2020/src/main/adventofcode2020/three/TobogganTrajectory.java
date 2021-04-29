@@ -7,14 +7,14 @@ import java.util.Scanner;
 import java.io.File;
 import java.math.BigInteger;
 
-public class TobogganTrajectory extends Solution {
+public class TobogganTrajectory extends Solution<BigInteger, String> {
 
 	public TobogganTrajectory() {
 		inputRelPath = "./resources/inputs/day3.txt";
 		identifier = "Day Three: TobogganTrajectory";
 	}
 
-	public ArrayList getData() {
+	public ArrayList<String> getData() {
 		ArrayList dataList = new ArrayList();
 		try {
 			File dataFile = new File(inputRelPath);
@@ -30,7 +30,7 @@ public class TobogganTrajectory extends Solution {
 		return dataList;
 	}
 
-	public int calculateTreesHit(ArrayList dataList, int intervalX, int intervalY) {
+	public int calculateTreesHit(ArrayList<String> dataList, int intervalX, int intervalY) {
 		int x = 0;
 		int treesHit = 0;
 		for (int y = 0; y < dataList.size(); ) {
@@ -47,22 +47,21 @@ public class TobogganTrajectory extends Solution {
 		return treesHit;
 	}
 
-	public int partOne(ArrayList dataList) {
-		int solution = calculateTreesHit(dataList, 3, 1);
+	public BigInteger partOne(ArrayList<String> dataList) {
+		BigInteger solution = new BigInteger("" + calculateTreesHit(dataList, 3, 1));
 		return solution;
 	}
 
-	public int partTwo(ArrayList dataList) {
-		BigInteger treesHitProduct = new BigInteger("1");
+	public BigInteger partTwo(ArrayList<String> dataList) {
+		BigInteger solution = new BigInteger("1");
 		int[][] paths = new int[][]{
 			{1, 1}, {3, 1}, {5, 1},
 			{7, 1}, {1, 2}
 		};
 		for (int[] path : paths) {
 			BigInteger treesHitThisRound = new BigInteger("" + calculateTreesHit(dataList, path[0], path[1]));
-			treesHitProduct = treesHitProduct.multiply(treesHitThisRound);
+			solution = solution.multiply(treesHitThisRound);
 		}
-		int solution = treesHitProduct.intValue();
 		return solution;
 	}
 

@@ -6,14 +6,14 @@ import java.util.ArrayList;
 import java.util.Scanner;
 import java.io.File;
 
-public class PasswordPhilosophy extends Solution {
+public class PasswordPhilosophy extends Solution<Integer, Row> {
 
 	public PasswordPhilosophy() {
 		inputRelPath = "./resources/inputs/day2.txt";
 		identifier = "Day Two: PasswordPhilosophy";
 	}
 
-	public ArrayList getData() {
+	public ArrayList<Row> getData() {
 		ArrayList dataList = new ArrayList();
 		try {
 			File dataFile = new File(inputRelPath);
@@ -34,7 +34,7 @@ public class PasswordPhilosophy extends Solution {
 		return dataList;
 	}
 
-	public int partOne(ArrayList dataList) {
+	public Integer partOne(ArrayList<Row> dataList) {
 		int solution = 0;
 		Row password = new Row();
 		for (Object item : dataList) {
@@ -59,7 +59,7 @@ public class PasswordPhilosophy extends Solution {
 		return solution;
 	}
 
-	public int partTwo(ArrayList dataList) {
+	public Integer partTwo(ArrayList<Row> dataList) {
 		int solution = 0;
 		Row password = new Row();
 		for (Object item : dataList) {

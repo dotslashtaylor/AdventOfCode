@@ -7,14 +7,14 @@ import java.util.Arrays;
 import java.util.Scanner;
 import java.io.File;
 
-public class BinaryBoarding extends Solution {
+public class BinaryBoarding extends Solution<Integer, String> {
 
 	public BinaryBoarding() {
 		inputRelPath = "./resources/inputs/day5.txt";
 		identifier = "Day Five: BinaryBoarding";
 	}
 
-	public ArrayList getData() {
+	public ArrayList<String> getData() {
 		ArrayList dataList = new ArrayList();
 		try {
 			File dataFile = new File(inputRelPath);
@@ -68,7 +68,7 @@ public class BinaryBoarding extends Solution {
 		return location;
 	}
 
-	public int partOne(ArrayList dataList) {
+	public Integer partOne(ArrayList<String> dataList) {
 		int solution = 0;
 		for (Object pass : dataList) {
 			String passString = (String) pass;
@@ -81,7 +81,7 @@ public class BinaryBoarding extends Solution {
 		return solution;
 	}
 
-	public int partTwo(ArrayList dataList) {
+	public Integer partTwo(ArrayList<String> dataList) {
 		int solution = 0;
 		int[] ids = new int[dataList.size()];
 

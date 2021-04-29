@@ -6,14 +6,14 @@ import java.util.ArrayList;
 import java.util.Scanner;
 import java.io.File;
 
-public class PassportProcessing extends Solution {
+public class PassportProcessing extends Solution<Integer, Passport> {
 
 	public PassportProcessing() {
 		inputRelPath = "./resources/inputs/day4.txt";
 		identifier = "Day Four: PassportProcessing";
 	}
 
-	public ArrayList getData() {
+	public ArrayList<Passport> getData() {
 		ArrayList dataList = new ArrayList();
 		try {
 			File dataFile = new File(inputRelPath);
@@ -36,7 +36,7 @@ public class PassportProcessing extends Solution {
 		return dataList;
 	}
 
-	public int partOne(ArrayList dataList) {
+	public Integer partOne(ArrayList<Passport> dataList) {
 		int solution = 0;
 		for (Object dataItem : dataList) {
 			Passport currentPassport = (Passport) dataItem;
@@ -48,7 +48,7 @@ public class PassportProcessing extends Solution {
 		return solution;
 	}
 
-	public int partTwo(ArrayList dataList) {
+	public Integer partTwo(ArrayList<Passport> dataList) {
 		int solution = 0;
 		for (Object dataItem : dataList) {
 			Passport currentPassport = (Passport) dataItem;

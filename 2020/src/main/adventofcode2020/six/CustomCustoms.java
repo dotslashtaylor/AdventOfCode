@@ -6,29 +6,32 @@ import java.util.ArrayList;
 import java.util.Scanner;
 import java.io.File;
 
-public class CustomCustoms extends Solution {
+public class CustomCustoms extends Solution<Integer, Group> {
 
 	public CustomCustoms() {
 		inputRelPath = "./resources/inputs/day6.txt";
 		identifier = "Day Six: CustomCustoms";
 	}
 
-	public ArrayList getData() {
+	public ArrayList<Group> getData() {
 		ArrayList dataList = new ArrayList();
 		try {
 			File dataFile = new File(inputRelPath);
 			Scanner scan = new Scanner(dataFile);
 			String groupString = "";
+			int groupSize = 0;
 			while (scan.hasNextLine()) {
 				String currentLine = scan.nextLine();
 				if (currentLine.equals("")) {
-					dataList.add(new Group(groupString));
+					dataList.add(new Group(groupString, groupSize));
+					groupSize = 0;
 					groupString = "";
 					continue;
 				}
-				groupString = groupString + " " + currentLine;
+				groupString = groupString + "\n" + currentLine;
+				groupSize++;
 			}
-			dataList.add(new Group(groupString));
+			dataList.add(new Group(groupString, groupSize));
 		}
 		catch(Exception exception) {
 			System.err.println(exception);
@@ -37,7 +40,7 @@ public class CustomCustoms extends Solution {
 		return dataList;
 	}
 
-	public int partOne(ArrayList dataList) {
+	public Integer partOne(ArrayList<Group> dataList) {
 		int solution = 0;
 		for (Object dataItem : dataList) {
 			Group currentGroup = (Group) dataItem;
@@ -46,7 +49,7 @@ public class CustomCustoms extends Solution {
 		return solution;
 	}
 
-	public int partTwo(ArrayList dataList) {
+	public Integer partTwo(ArrayList<Group> dataList) {
 		int solution = 0;
 		for (Object dataItem : dataList) {
 			Group currentGroup = (Group) dataItem;

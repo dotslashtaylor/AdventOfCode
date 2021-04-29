@@ -11,15 +11,17 @@ class DaySixTest {
 
 	@Test 
 	void testPartOne() {
-		ArrayList testValues = new ArrayList();
-		testValues.add(new Group("abcx abcy abcz"));
+		ArrayList<Group> testValues = new ArrayList();
+		testValues.add(new Group("abcx abcy abcz", 3));
 
 		assertEquals(6, testClass.partOne(testValues));
 
 
 		testValues.clear();
-		for (String i : new String[]{"abc", "a b c", "ab ac", "a a a a", "b"}) {
-			testValues.add(new Group(i));
+		String[] stringValues = new String[]{"abc", "a b c", "ab ac", "a a a a", "b"};
+		int[] sizes = new int[]{1, 3, 2, 4, 1};
+		for (int i = 0; i < 5; i++) {
+			testValues.add(new Group(stringValues[i], sizes[i]));
 		}
 		assertEquals(11, testClass.partOne(testValues));
 	}
@@ -27,14 +29,16 @@ class DaySixTest {
 
 	@Test 
 	void testPartTwo() {
-		ArrayList testValues = new ArrayList();
-		testValues.add(new Group("abcx abcy abcz"));
+		ArrayList<Group> testValues = new ArrayList();
+		testValues.add(new Group("abcx abcy abcz", 3));
 
 		assertEquals(3, testClass.partTwo(testValues));
 
 		testValues.clear();
-		for (String i : new String[]{"abc", "a b c", "ab ac", "a a a a", "b"}) {
-			testValues.add(new Group(i));
+		String[] stringValues = new String[]{"abc", "a b c", "ab ac", "a a a a", "b"};
+		int[] sizes = new int[]{1, 3, 2, 4, 1};
+		for (int i = 0; i < 5; i++) {
+			testValues.add(new Group(stringValues[i], sizes[i]));
 		}
 		assertEquals(6, testClass.partTwo(testValues));
 	}

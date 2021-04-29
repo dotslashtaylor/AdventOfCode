@@ -6,14 +6,15 @@ import java.util.ArrayList;
 import java.util.Scanner;
 import java.io.File;
 
-public class ReportRepair extends Solution {
+public class ReportRepair extends Solution<Integer, Integer> {
 
 	public ReportRepair() {
 		inputRelPath = "./resources/inputs/day1.txt";
 		identifier = "Day One: ReportRepair";
 	}
 
-	public ArrayList getData() {
+	@Override
+	public ArrayList<Integer> getData() {
 		ArrayList<Integer> dataList = new ArrayList<>();
 		try {
 			File dataFile = new File(inputRelPath);
@@ -30,7 +31,7 @@ public class ReportRepair extends Solution {
 		return dataList;
 	}
 
-	public int partOne(ArrayList dataList) {
+	public Integer partOne(ArrayList<Integer> dataList) {
 		int solution = 0;
 
 		int i = 0, j = 1;
@@ -56,7 +57,8 @@ public class ReportRepair extends Solution {
 		return solution;
 	}
 
-	public int partTwo(ArrayList dataList) {
+	@Override
+	public Integer partTwo(ArrayList<Integer> dataList) {
 		int solution = 0;
 		int i = 0, j = 1, k = 2;
 		while (i < dataList.size()) {

@@ -1,6 +1,7 @@
 package adventofcode2020.three;
 
 import java.util.ArrayList;
+import java.math.BigInteger;
 
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
@@ -24,7 +25,7 @@ class DayThreeTest {
 		for (String i : forrest) {
 			forrestList.add(i);
 		}
-		assertEquals(7, testClass.partOne(forrestList));
+		assertEquals(new BigInteger("7"), testClass.partOne(forrestList));
 	}
 
 	@Test 
@@ -33,7 +34,7 @@ class DayThreeTest {
 		for (String i : forrest) {
 			forrestList.add(i);
 		}
-		assertEquals(336, testClass.partTwo(forrestList));
+		assertEquals(new BigInteger("336"), testClass.partTwo(forrestList));
 	}
 
 }

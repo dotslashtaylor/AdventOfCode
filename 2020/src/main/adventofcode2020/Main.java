@@ -11,6 +11,7 @@ import adventofcode2020.three.TobogganTrajectory;
 import adventofcode2020.four.PassportProcessing;
 import adventofcode2020.five.BinaryBoarding;
 import adventofcode2020.six.CustomCustoms;
+import adventofcode2020.eight.HandheldHalting;
 
 public class Main {
 
@@ -22,6 +23,7 @@ public class Main {
 		solutionsList.add(new PassportProcessing());
 		solutionsList.add(new BinaryBoarding());
 		solutionsList.add(new CustomCustoms());
+		solutionsList.add(new HandheldHalting());
 
 		if (args.length > 0) {
 			for(String argument : args) {

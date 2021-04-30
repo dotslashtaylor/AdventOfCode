@@ -1,9 +1,14 @@
 package adventofcode2020.seven;
 
+import java.util.ArrayList;
 
-
-public abstract class Bag {
+public class Bag {
 	public String identifier;
-	public Bag[] bags;
+	public ArrayList<String> bagsContained;
+
+	public Bag(String id, ArrayList<String> bags) {
+		this.identifier = id;
+		this.bagsContained = bags;
+	}
 
 }

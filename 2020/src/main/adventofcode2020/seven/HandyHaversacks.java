@@ -6,14 +6,14 @@ import java.util.ArrayList;
 import java.util.Scanner;
 import java.io.File;
 
-public class HandyHaversacks extends Solution<Integer, String> {
+public class HandyHaversacks extends Solution<Integer, Bag> {
 
 	public HandyHaversacks() {
 		inputRelPath = "./resources/inputs/day7.txt";
 		identifier = "Day Seven: HandyHaversacks";
 	}
 
-	public ArrayList<String> getData() {
+	public ArrayList<Bag> getData() {
 		ArrayList dataList = new ArrayList();
 		try {
 			File dataFile = new File(inputRelPath);
@@ -29,15 +29,15 @@ public class HandyHaversacks extends Solution<Integer, String> {
 		return dataList;
 	}
 
-	public Integer partOne(ArrayList<String> dataList) {
+	public Integer partOne(ArrayList<Bag> dataList) {
 		int solution = 0;
-		for (Object dataItem : dataList) {
-			String sentence = (String) dataItem;
+		for (Bag dataItem : dataList) {
+			Bag sentence = dataItem;
 		}
 		return solution;
 	}
 
-	public Integer partTwo(ArrayList<String> dataList) {
+	public Integer partTwo(ArrayList<Bag> dataList) {
 		int solution = 0;
 
 		return solution;
